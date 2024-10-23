@@ -1,0 +1,400 @@
+/* start main styles */
+:root {
+    --main-color: #FAA8B6;
+    --sec-color: #807d7d;
+
+}
+.text-mcolor{
+    color:var(--main-color);
+}
+html {
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    scroll-behavior: smooth;
+    scroll-padding-top: 93.5px;
+    
+}
+
+h1,
+.products .tab-content .box h4 {
+
+    font-family: "Playwrite AU VIC", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h2,
+h3,
+h4 {
+    font-family: "Prociono", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+img {
+    width: 100%;
+    display:block;
+    /* max-height: 100%; */
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+section {
+    margin-block:3rem;
+    padding:1rem
+}
+p{
+    color:var(--sec-color)
+}
+.about > *,
+.contact > *{
+    opacity: 0;
+    transform:translateY(-100px);
+    transition:all 1s linear;
+}
+.about.active-sec > *,
+.contact.active-sec > *{
+    opacity: 1;
+    transform:translateY(0);
+}
+.sec-title{
+    padding-inline:1em;
+    border-left:3px solid var(--main-color);
+    text-transform: capitalize;
+}
+                            /* button main  */
+                            /* From Uiverse.io by alexmaracinaru */ 
+.btn {
+    position: relative;
+    /* margin: auto; */
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: var(--main-color);
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn a {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    
+    letter-spacing: 0.05em;
+    color:black;
+    z-index: 3;
+  }
+  
+  .btn svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--main-color);
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover:before {
+    width: 100%;
+    background: var(--main-color);
+  }
+  
+  .btn:hover svg {
+    transform: translateX(0);
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+  }
+  
+/* end main styles  */
+/* start header section  */
+.scroll-up{
+    background-color: var(--main-color);
+    color:white;
+}
+nav{
+    background-image: linear-gradient( 175deg, white 70%, var(--main-color));
+}
+nav .navbar-brand img {
+    width: 80px;
+}
+nav .navbar-nav .nav-link.active{
+    color:var(--main-color)
+}
+nav .navbar-toggler:focus {
+    box-shadow: none;
+}
+nav .navbar-collapse{
+     justify-content: space-between;
+    width: 70%;
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.navbar-nav .nav-item{
+    width:100%;
+    text-align: center;
+}
+/* start  button  From Uiverse.io by cssbuttons-io */
+nav .navbar-collapse button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+nav .navbar-collapse button.learn-more {
+    width: 12rem;
+    height: auto;
+}
+
+nav .navbar-collapse button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background:rgb(255, 166, 181);
+    border-radius: 1.625rem;
+}
+
+nav .navbar-collapse button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #0f0;
+}
+
+nav .navbar-collapse button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+nav .navbar-collapse button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+nav .navbar-collapse button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #282936;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav .navbar-collapse button:hover .circle {
+    width: 100%;
+}
+
+nav .navbar-collapse button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+
+nav .navbar-collapse button:hover .button-text {
+    color: #fff;
+}
+
+header{
+    margin-top:93.5px;
+    min-height: calc(100vh - 93.5px); 
+}
+header article figure img{
+    /* width:30%; */
+    height:120px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 300px;
+    filter: drop-shadow(2px 4px 6px black);
+    transition:object-position 3s;
+    cursor:pointer;
+}
+header article figure img:hover{
+    object-position: top center;
+}
+header  .row .imgs img{
+    width: 250px;  
+    position: relative;
+    background-image: url(../imgs/about.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+
+/* End button from ui verse */
+/* End header section  */
+/* start about */
+.about {
+    background-image: url(../imgs/bgsec.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 40% ;
+}
+.about img{
+    background-image: url(../imgs/about.svg);
+    background-repeat:no-repeat;
+    max-width:150px;
+    background-position: 50% 100%;    
+    background-size:contain;
+    transform:scaleX(1.5);
+    margin-inline:auto;
+}
+/* End about */
+/* start products  */
+.products .sec-title{
+    width:fit-content;
+    border-left:0;
+    border-bottom: 1px solid var(--main-color);
+    padding-bottom:0.51rem
+}
+.products .sec-title::after,
+.products .sec-title::before{ 
+    content: '';
+    position:absolute;
+    width:100%;
+    left:0;
+    top:calc(100% + 8px);
+    height: 1px;
+    background-color:var(--main-color);
+}
+.products .sec-title::before{
+    width:50%;
+    top:calc(100% + 4px);
+    left:50%;
+    transform:translateX(-50%)
+}
+.products .nav-link{
+    color:black;
+}
+.products .nav-pills .nav-link.active{
+    background-color: rgb(250, 168, 182);
+}
+.products ul{
+    position: sticky;
+    top: 93px;
+    left: 0px;
+    z-index: 50;
+    background-color: white;
+    padding-block: 1.2rem;
+    margin-bottom: 0px !important;
+    margin-top: 1em !important;
+}
+.products .tab-content .box{
+    border-color:var(--main-color) !important;
+    border-width:1px !important;
+    overflow: hidden;
+    cursor: pointer;
+}
+.products .tab-content .box img{
+    height: 400px;
+    object-fit: contain;
+    transition:transform 1s ;
+}
+.products .tab-content .box:hover img{
+    transform: scale(1.1);
+}
+.products .tab-content .box:hover .layer{
+    top:35%;
+    bottom:0;
+    transition: 1.5s;
+}
+.products .tab-content .box .layer{
+    top:87%;
+    width:100%;
+    left:0;
+}
+.products .arrow {
+    width: fit-content;
+    
+}
+.products .arrow img{
+    height:200px;
+    transform: rotate(-30deg);
+    
+}
+/* End products  */
+/* start contact */
+.contact .contact-links .socials a{
+    border: 1px solid var(--main-color);
+    padding:0.5rem;
+    display: inline-flex;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+/* start footer */
+footer{
+    background-image: linear-gradient(357deg, white 70%, var(--main-color));
+}
+/* End footer */
+/* End contact */
+@media (min-width: 768px) {
+    .navbar-expand-lg .navbar-collapse {
+        display:flex;
+        flex-basis: auto;
+        flex-direction: row;
+    }
+    .navbar-nav{
+        flex-direction: row;
+
+    }
+    .navbar-toggler{
+        display: none;
+    }
+}
+/* End home section  */
